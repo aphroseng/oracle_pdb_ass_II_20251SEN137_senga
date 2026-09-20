@@ -1,1 +1,43 @@
 
+# Oracle Pluggable Databases (PDB) Management - Assignment II
+
+## Overview of Tasks
+This repository contains the practical completion and technical documentation for INSY 8311 Assignment II.
+
+- **Task 1:** Created a new Pluggable Database (`se_pdb_20251SEN137`), opened it in READ WRITE mode, and created a dedicated PDB user (`senga_plsqlauca_20251SEN137`).
+- **Task 2:** Created a temporary Pluggable Database (`se_to_delete_pdb_20251SEN137`) and completely dropped it including its datafiles.
+- **Task 3:** Accessed and verified the environment status via Oracle Enterprise Manager (OEM) Express Dashboard.
+
+## Oracle Environment Used
+- **Database Version:** Oracle Database 21c Enterprise Edition (Release 21.3.0.0.0)
+- **Operating System:** Microsoft Windows x86 64-bit
+- **Architecture:** Multitenant Container Database (CDB)
+
+## Explanation of Tasks Executed
+
+### Task 1: Primary PDB Creation
+1. Executed `CREATE PLUGGABLE DATABASE se_pdb_20251SEN137` using path conversion from `PDBSEED` to `SE_PDB_20251SEN137`.
+2. Opened the PDB into `READ WRITE` state using `ALTER PLUGGABLE DATABASE se_pdb_20251SEN137 OPEN;`.
+3. Created user `senga_plsqlauca_20251SEN137` inside the container and granted DBA and CREATE SESSION privileges.
+
+### Task 2: Temporary PDB Creation & Deletion
+1. Switched back to `CDB$ROOT` container.
+2. Created temporary PDB `se_to_delete_pdb_20251SEN137`.
+3. Closed the temporary PDB and executed `DROP PLUGGABLE DATABASE se_to_delete_pdb_20251SEN137 INCLUDING DATAFILES;`.
+4. Verified successful removal using `SHOW PDBS;`.
+
+### Task 3: OEM Setup
+1. Accessed OEM Express interface at `https://localhost:5500/em`.
+2. Verified CDB status reflecting active PDB count and instance performance.
+
+## Challenges Faced & Solutions
+- **ORA-65005 (Missing/Invalid File Name Pattern):** Occurred when executing default Linux-style path conversions on Windows. Resolved by specifying absolute Windows directory paths in the `FILE_NAME_CONVERT` parameter.
+- **ORA-01920 (User Name Conflict):** Occurred during user creation re-execution. Resolved by dropping the existing user with `CASCADE` or altering credentials directly.
+
+## Academic Integrity Statement
+I declare that this assignment represents my own individual work. All commands, screenshots, and repository setup were performed independently without unauthorized collaboration or prohibited tool usage.
+
+## Submission Details
+- **Repository Link:** https://github.com/YOUR_GITHUB_USERNAME/oracle_pdb_ass_II_20251SEN137_senga
+- **PDB Name Created:** se_pdb_20251SEN137
+- **Issues Encountered:** Yes (Windows path conversion ORA-65005, resolved via exact Windows file path strings)
