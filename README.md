@@ -1,8 +1,8 @@
 # Oracle Pluggable Databases (PDB) Management - Assignment II Report
 
 ## Course & Submission Details
- **Student Name:** Senga Aphrodis
- **Student ID:** 20251SEN137
+ -**Student Name:** Senga Aphrodis
+ -**Student ID:** 20251SEN137
 - **Course Name:** Database Development with PL/SQL (INSY 8311)
 - **Instructor:** Eric Maniraguha
 - **Teaching Assistant:** Afanyu Emmanuel
@@ -35,7 +35,7 @@ This repository contains the official technical report and visual evidence for I
 ## Task Execution Details & Explanations
 
 ### Task 1: Create a New Pluggable Database & User Setup
-1. Created the primary pluggable database `se_pdb_20251SEN137` from the `PDBSEED` template following the strict naming convention (`FirstTwoLettersOfFirstName_pdb_Student ID`).
+1. Created the primary pluggable database `se_pdb_20251SEN137` from the `PDBSEED` template following the strict naming convention (`FirstTwoLettersOfFirstName_pdb_Student ID`).![create pluggable database](screensots/pdb_creation/task1_create_pdb.png)
 2. Opened the PDB in `READ WRITE` mode to make it active for user sessions.
 3. Created the dedicated local user `senga_plsqlauca_20251SEN137` inside `se_pdb_20251SEN137` following the exact format (`FirstName_plsqlauca_StudentID`) and assigned DBA privileges for future class activities.
 
