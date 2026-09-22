@@ -1,8 +1,9 @@
 # Oracle Pluggable Databases (PDB) Management - Assignment II Report
 
 ## Course & Submission Details
- -**Student Name:** Senga Aphrodis
- -**Student ID:** 20251SEN137
+  **Student Name:** Senga Aphrodis
+  
+ **Student ID:** 20251SEN137
 - **Course Name:** Database Development with PL/SQL (INSY 8311)
 - **Instructor:** Eric Maniraguha
 - **Teaching Assistant:** Afanyu Emmanuel
